@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+    --primary-clr-400: #2D51E3;
+    --primary-clr-500: #213999;
+
+    --accent-clr-400: #42FF00;
+    --accent-clr-500: #39871E;
+
+    --neutral-clr-100: #fff;
+    --neutral-clr-800: #131313;
+    --neutral-clr-900: #000000;
+
+    --ff-primary: 'Inter', sans-serif;
+    --fw-light: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    --br: .375rem;
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    color: var(--neutral-clr-100);
+}
+
+/* header */
+.hero__title {
+  line-height: 1;
+}
+
+.hero__title.mobile{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+header {
+  background-color: var(--neutral-clr-900);
+}
+
+.top-header .header__logo {
+  padding-block: 1rem 2rem;
+  max-width: 11.25rem;
+}
+
+.hero-image-side .hero-image-wrapper {
+  max-width: 70%;
+  margin-inline: auto;
+  position: relative;
+}
+
+.top-shadow, 
+.right-shadow, 
+.left-shadow, 
+.bottom-shadow {
+  position: absolute;
+}
+
+.top-shadow {
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-image: linear-gradient(to bottom, #060407, transparent);
+}
+
+.top-shadow::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  top: -.75rem;
+  left: 0;
+  background-image: linear-gradient(to top, #060407, transparent);
+}
+
+.left-shadow {
+  height: 102%;
+  width: 15%;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #060407, transparent);
+}
+
+.left-shadow::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 15%;
+  left: -1rem;
+  bottom: 0;
+  background-image: linear-gradient(to left, #060407, transparent);
+}
+
+.right-shadow {
+  height: 100%;
+  width: 15%;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to left, #060407, transparent);
+}
+
+.right-shadow::before {
+  content: "";
+  height: 100%;
+  width: 15%;
+  right: -.75rem;
+  bottom: 0;
+  background-image: linear-gradient(to right, #060407, transparent);
+}
+
+.bottom-shadow {
+  width: 100%;
+  height: 15%;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, #060407, transparent);
+}
+
+.hero-text-side {
+  text-align: center;
+}
+
+.hero-text-side p {
+  padding-block: 1rem;
+}
+
+.hero-text-side .button {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  border-radius: var(--br);
+  background-image: linear-gradient(to right, var(--accent-clr-400), var(--accent-clr-500) 50%);
+  border: 0;
+  cursor: pointer;
+  animation: pulse-animation 1.75s alternate infinite linear, shake-animation 3.5s infinite ease-in;
+  box-shadow: 0 0 .5rem 0 var(--accent-clr-400);
+  transition: transform .1s linear;
+}
+
+.button a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--neutral-clr-100);
+  font-weight: var(--fw-bold);
+  padding: 1rem;
+}
+
+@media (min-width: 50em) {
+  .button a {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@keyframes pulse-animation {
+  50% {
+    box-shadow: 0 0 1.5rem 0 var(--accent-clr-400);
+  }
+}
+
+@keyframes shake-animation {
+  0% {
+    left: 0;
+  }
+  1% {
+    left: -3px;
+  }
+  2% {
+    left: 5px;
+  }
+  3% {
+    left: -8px;
+  }
+  4% {
+    left: 8px;
+  }
+  5% {
+    left: -5px;
+  }
+  6% {
+    left: 3px;
+  }
+  7% {
+    left: 0;
+  }
+}
+
+/* testimonial section */
+
+.testimonials {
+  background-color: var(--neutral-clr-900);
+  text-align: center;
+}
+
+.testimonials-lists {
+  list-style: none;
+}
+
+.testimonials-list {
+  margin-top: 1.5rem;
+}
+
+.testimonials-list blockquote {
+  text-align: start;
+  border: 1px solid var(--primary-clr-500);
+  border-radius: var(--br);
+  padding: 1rem;
+}
+
+.testimonials .button {
+  margin-block: 1.5rem;
+}
+
+/* modules section */
+
+.modules-section {
+  background-image: url("Background-images/Background-módulos.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modules-button-wrapper {
+  background-color: rgba(0, 0, 0, .73);
+  border-radius: var(--br);
+}
+
+.modules__button {
+  display: block;
+  border-radius: var(--br);
+  background: none;
+  border: 0;
+}
+
+.modules-lists {
+  list-style: none;
+}
+
+.modules-lists li::before {
+  content: "\2022";
+  color: var(--primary-clr-400);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* about section */
+
+.about-section {
+  background-image: url("Background-images/background-sobre.png");
+  background-size: cover;
+}
+
+/* utility classes */
+
+.container {
+  width: min(90%, 69.375rem);
+  margin-inline: auto;
+}
+
+.primary-clr-400 {
+  color: var(--primary-clr-400);
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 50em) {
+  .desktop {
+    display: inline-block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
