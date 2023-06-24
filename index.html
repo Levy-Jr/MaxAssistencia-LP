@@ -18,7 +18,7 @@
             <div class="top-header">
                 <img class="header__logo" src="Logo/Logo-max.png" alt="home">
             </div>
-            <div>
+            <div class="header-content">
                 <div class="hero-image-side">
                     <h1 class="hero__title mobile">Soluções Profissionais para Reparos em <span class="primary-clr-400">Placas de Vídeo</span></h1>
                     <div class="hero-image-wrapper">
@@ -26,12 +26,14 @@
                         <div class="right-shadow"></div>
                         <div class="bottom-shadow"></div>
                         <div class="left-shadow"></div>
+                        <img class="graphic-card" src="Background-images/placa-de-vídeo-header.png" alt="uma placa de vídeo pequena">
                         <img class="hero__image" src="Background-images/Background-header.png" alt="uma placa de vídeo com um blur azul">
+                        <img class="blurred-graphic-card" src="Background-images/placa-de-vídeo-header-desfocada.png" alt="uma placa de vídeo pequena desfocada">
                     </div>
                 </div>
                 <div class="hero-text-side">
                     <h1 class="hero__title desktop">Soluções Profissionais para Reparos em <span class="primary-clr-400">Placas de Vídeo</span></h1>
-                    <p>Nesse curso, você aprenderá técnicas para se especializar no reparos de placas de vídeo. Após o curso, você terá habilidades de como agir em situações de placas que não ligam, ligam e não geram vídeo, ligam e se desligam, ligam e apresentam artefatos.</p>
+                    <p>Nesse curso, você aprenderá<span class="primary-clr-400"> técnicas para se especializar no reparos de placas de vídeo.</span> Após o curso, você terá habilidades de como agir em situações de placas que não ligam, ligam e não geram vídeo, ligam e se desligam, ligam e apresentam artefatos.</p>
                     <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
                 </div>
             </div>
@@ -39,49 +41,55 @@
     </header>
     <main>
         <section class="testimonials">
+            <div class="top-shadow"></div>
             <div class="container">
                 <h2 class="testimonials__title">DEPOIMENTOS</h2>
-                <div class="testimonials-videos">
-                    <div>
+                <div class="circle"></div>
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-videos">
+                        <div class="main-video">
+                        </div>
+                        <div class="thumb-videos-wrapper">
+                            <div class="thumb-video"></div>
+                            <div class="thumb-video"></div>
+                            <div class="thumb-video"></div>
+                        </div>
                     </div>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="testimonials-quotes">
+                        <ul class="testimonials-lists">
+                            <li class="testimonials-list">
+                                <blockquote>
+                                        <div class="profile-picture"></div>
+                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                </blockquote>
+                            </li>
+                            <li class="testimonials-list">
+                                <blockquote>
+                                        <div class="profile-picture"></div>
+                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                </blockquote>
+                            </li>
+                            <li class="testimonials-list">
+                                <blockquote>
+                                        <div class="profile-picture"></div>
+                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                </blockquote>
+                            </li>
+                        </ul>
+                        <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
                     </div>
-                </div>
-                <div class="testimonials-quotes">
-                    <ul class="testimonials-lists">
-                        <li class="testimonials-list">
-                            <blockquote>
-                                    <div class="profile-picture"></div>
-                                    <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor.</p>
-                            </blockquote>
-                        </li>
-                        <li class="testimonials-list">
-                            <blockquote>
-                                    <div class="profile-picture"></div>
-                                    <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor.</p>
-                            </blockquote>
-                        </li>
-                        <li class="testimonials-list">
-                            <blockquote>
-                                    <div class="profile-picture"></div>
-                                    <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor.</p>
-                            </blockquote>
-                        </li>
-                    </ul>
-                    <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
                 </div>
             </div>
         </section>
         <section class="modules-section">
             <div class="container">
-                <div>
+                <div class="modules-images-wrapper">
+                    <img class="modules-graphic-card" src="Módulos/module-graphic-card.png" alt="graphic card">
+                    <img class="octagono__img" src="Depoimentos/Octagono.svg" alt="">
                 </div>
                 <div class="modules-button-wrapper">
-                    <button class="modules__button">O que você irá aprender?</button>
-                    <ul class="modules-lists">
+                    <button class="modules__button" data-modules-button>O que você irá aprender?<img class="arrow-icon" src="Módulos/arrow-icon.svg" alt="" data-arrow-icon> </button>
+                    <ul class="modules-lists" data-modules-lists>
                         <li>Introdução</li>
                         <li>Equipamentos Necessários</li>
                         <li>Informações Pré e Pós-Reparo</li>
@@ -94,7 +102,7 @@
                         <li>Técnica de Medição - Encontrando curto</li>
                         <li>Osciloscópio</li>
                         <li>Testes Iniciais</li>
-                        <li>Placa Liga Sem Vìdeo</li>
+                        <li>Placa Liga Sem Vídeo</li>
                         <li>Placa Não Liga</li>
                         <li>Soldas na Prática</li>
                         <li>Técnicas de Microssoldagem</li>
@@ -104,14 +112,14 @@
                         <li>Conclusão</li>
                         <li>Bônus</li>
                     </ul>
-                    <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
                 </div>
+                <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
             </div>
         </section>
-        <section class="about-section">
+<!--         <section class="about-section">
             <h2><span>quem será seu professor?</span>
                 <span class="primary-clr-400">Maxsuel Lopes</span></h2>
-        </section>
+        </section> -->
     </main>
     <footer></footer>
 </body>
