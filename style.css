@@ -11,8 +11,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol{
   list-style: none;
 }
 
@@ -82,6 +82,8 @@ select {
 
     --fs-900: clamp();
     --fs-800: clamp(1.5rem, 4.5vw, 2.625rem);
+    --fs-700: clamp(.75rem, 3.5vw, 1.5rem);
+    --fs-600: clamp(.5rem, 3.5vw, 1rem);
 
     --br: .375rem;
     --circle-border: 2rem;
@@ -542,6 +544,7 @@ header {
   margin-inline: auto;
   overflow: hidden;
   margin-bottom: 2rem;
+  z-index: 1;
 }
 
 @media (min-width: 50em) {
@@ -562,59 +565,72 @@ header {
   animation: circle-anim 8s linear infinite;
 }
 
-.modules-button-wrapper {
-  width: min(100%, 31.25rem);
+.modules-lists {
   position: relative;
-  background-color: rgba(0, 0, 0, .73);
-  border-radius: var(--br);
-  border: 2px solid var(--primary-clr-500);
+  text-align: start;
 }
 
-.modules__button {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.module {
+  border: .25rem solid var(--primary-clr-500);
   border-radius: var(--br);
-  background: none;
-  border: 0;
-  color: var(--neutral-clr-100);
-  width: 100%;
-  padding: .75em 1em;
-}
-
-@media (min-width: 50em) {
-  .modules__button {
-    padding: .75em 3em;
-  }
+  margin-top: 2rem;
+  background-image: linear-gradient(to right, var(--neutral-clr-900) 85%, var(--primary-clr-500));
 }
 
 .modules-lists {
   position: relative;
-  height: 0;
-  overflow: hidden;
-  transition: height .75s ease-in-out;
+  z-index: 1;
   list-style: none;
+}
+
+.module__title > button {
+  padding: .5rem .75rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 50em) {
+  .module__title > button {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.module__title {
+  font-size: var(--fs-700);
+}
+
+.left-button-part {
   text-align: start;
 }
 
-@media (min-width: 50em) {
-  .modules-lists {
-    padding: 0em 3em;
-  }
+.module__count {
+  display: block;
+  text-align: start;
+  color: var(--primary-clr-400);
+  font-size: var(--fs-600);
+  white-space: nowrap;
 }
 
-.modules-lists.active {
-  height: 700px;
+.module__title > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--neutral-clr-100);
 }
 
-@media (min-width: 50em) {
-  .modules-lists.active {
-    height: 685px;
-  }
+.class-amount-group {
+  display: flex;
+  font-size: var(--fs-600);
+  align-items: center;
+  gap: clamp(.25rem, 3vw, 1rem);
+  font-weight: var(--fw-light);
+  white-space: nowrap;
 }
 
 .arrow-icon {
+  width: clamp(1rem, 3vw, 2rem);
   transition: .3s;
   transform: rotate(180deg);
 }
@@ -623,16 +639,33 @@ header {
   transform: rotate(0deg);
 }
 
-.modules-lists li {
-  padding: .25rem 0rem .25rem 1rem;
+.module__ul-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
 }
 
-.modules-lists li::before {
+.module__ul {
+  overflow: hidden;
+  transition: grid-template-rows .3s;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.module__ul-wrapper.active {
+  grid-template-rows: 1fr;
+}
+
+.module__ul > li {
+  margin-top: 1rem;
+}
+
+.modules-lists > .module .module__ul > li::before {
   content: "\2022";
   color: var(--primary-clr-400);
   font-weight: bold;
   display: inline-block;
   width: 1em;
+  margin-left: -1em;
 }
 
 .modules-section .button {
