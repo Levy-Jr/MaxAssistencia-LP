@@ -9,3 +9,33 @@ moduleBtns.forEach(button => {
         parentButtonElement.querySelector('[data-arrow-icon]').classList.toggle('active')
     })
 })
+
+const buttonThumbImages = document.querySelectorAll("[data-thumb-image-wrapper]")
+
+const changeSlideImage = (index) => {
+    const slides = document.querySelector('[data-slides]')
+
+    const activeSlide = slides.querySelector('[data-active]')
+    activeSlide.querySelector('video').pause()
+
+    slides.children[index].dataset.active = true
+    delete activeSlide.dataset.active
+}
+
+const changeThumbImage = (index) => {
+    const buttonThumbImagesParent = document.querySelector(".thumb-videos-wrapper")
+
+    const activeThumbs = buttonThumbImagesParent.querySelectorAll(".active")
+
+    buttonThumbImagesParent.children[index].classList.add('active')
+    activeThumbs.forEach(activeThumb => activeThumb.classList.remove('active'))
+}
+
+buttonThumbImages.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        if(!element.classList.contains('active')){
+            changeSlideImage(index)
+            changeThumbImage(index)
+        }
+    })
+})
