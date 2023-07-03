@@ -10,10 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    
+    
+    <script src="node_modules/animejs/lib/anime.min.js" defer></script>
     <script src="main.js" defer></script>
+
 </head>
 <body data-menu>
-    <header>
+    <header id="home">
         <div class="container">
             <div class="top-header">
                 <img class="header__logo" src="Logo/Logo-max.png" alt="home">
@@ -96,19 +101,19 @@
                             <li class="testimonials-list">
                                 <blockquote>
                                         <div class="profile-picture"></div>
-                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                        <p class="quote">"Com certeza recomendo, aprendi bastante coisa. Digo pra vocês que realmente vale a pena o investimento."</p>
                                 </blockquote>
                             </li>
                             <li class="testimonials-list">
                                 <blockquote>
                                         <div class="profile-picture"></div>
-                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                        <p class="quote">"Vale muito a pena e vale cada centavo investido no curso. O professor domina o conteúdo e passa de uma forma simples e de fácil compreensão."</p>
                                 </blockquote>
                             </li>
                             <li class="testimonials-list">
                                 <blockquote>
                                         <div class="profile-picture"></div>
-                                        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut augue in urna sagittis viverra. Donec sit amet cursus felis, vel rutrum tortor."</p>
+                                        <p class="quote">"Já fiz outros cursos e não consegui assimilar tanto conhecimento com esse curso com o Max. Digo pra vocês: metodologia simples e eficaz é com o Max."</p>
                                 </blockquote>
                             </li>
                         </ul>
@@ -421,9 +426,12 @@
             </div>
         </section>
         <section class="about-section" id="about">
+            <div class="black-shadow"></div>
             <div class="container">
                 <div class="about-section-image-side">
                     <div class="about-image-wrapper">
+                        <div class="top-circle"></div>
+                        <div class="bottom-circle"></div>
                         <img src="sobre-foto.png" alt="Maxsuel Lopes mostrando uma placa de vídeo">
                         <ul class="about-social-links">
                             <li class="social-link"><a href="https://instagram.com/max_assistencia"><img src="redes sociais/bi_instagram.svg" alt="instagram"></a></li>
@@ -445,6 +453,7 @@
              <div class="footer-menu-side">
                 <img class="footer__logo" src="Logo/Logo-max.png" alt="logo">
                 <ul class="footer-nav-ul">
+                    <li class="footer-nav__li"><a href="#home">Home</a></li>
                     <li class="footer-nav__li"><a href="#testimonials">Depoimentos</a></li>
                     <li class="footer-nav__li"><a href="#modules">Módulos</a></li>
                     <li class="footer-nav__li"><a href="#about">Sobre</a></li>
