@@ -488,6 +488,7 @@ header {
   color: var(--neutral-clr-100);
   font-weight: var(--fw-bold);
   padding: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 50em) {
