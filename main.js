@@ -1,3 +1,18 @@
+const btnHamburger = document.querySelector('[data-menu-button]')
+const menuActive = document.querySelectorAll('[data-menu]')
+
+btnHamburger.addEventListener('click', () => {
+    menuActive.forEach(menu => menu.toggleAttribute('data-active-menu'))
+})
+
+const navLinks = document.querySelectorAll('.header-navigation__li')
+
+navLinks.forEach(li => {
+    li.addEventListener('click', () => {
+        menuActive.forEach(menu => menu.removeAttribute('data-active-menu'))
+    })
+})
+
 const moduleBtns = document.querySelectorAll("[data-module-button]")
 const modulesList = document.querySelector("[data-modules-lists]")
 

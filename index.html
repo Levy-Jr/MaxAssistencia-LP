@@ -12,15 +12,30 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-<body>
+<body data-menu>
     <header>
         <div class="container">
             <div class="top-header">
                 <img class="header__logo" src="Logo/Logo-max.png" alt="home">
+                <nav class="header-nav" data-menu>
+                    <button class="header-navigation__menu-button" data-menu-button data-menu><span class="menu-button__line" data-menu></span>
+                        <span class="menu-button__line" data-menu></span>
+                        <span class="menu-button__line" data-menu></span></button>
+                    <ul class="header-navigation__ul" data-menu>
+                        <li class="header-navigation__li"><a href="#testimonials">Depoimentos</a></li>
+                        <li class="header-navigation__li"><a href="#modules">Módulos</a></li>
+                        <li class="header-navigation__li"><a href="#about">Sobre</a></li>
+                    </ul>
+                    <ul class="header-social__ul" data-menu>
+                        <li class="header-social__li"><a href="https://www.facebook.com/MaxAssistenciaTecnica" target="_blank"><img src="redes sociais/ic_baseline-facebook.svg" alt=""></a></li>
+                        <li class="header-social__li"><a href="https://instagram.com/max_assistencia" target="_blank"><img src="redes sociais/bi_instagram.svg" alt=""></a></li>
+                        <li class="header-social__li"><a href="https://www.youtube.com/MaxAssist%C3%AAnciaT%C3%A9cnica" target="_blank"><img src="redes sociais/mdi_youtube.svg" alt=""></a></li>
+                      </ul>
+                </nav>
             </div>
             <div class="header-content">
                 <div class="hero-image-side">
-                    <h1 class="hero__title mobile">Soluções Profissionais para Reparos em <span class="primary-clr-400">Placas de Vídeo</span></h1>
+                    <h1 class="hero__title mobile">Desvende os <span class="accent-clr-400">Segredos das Placas de Vídeo:</span> Torne-se um Especialista em Reparos! Placas de Vídeo</h1>
                     <div class="hero-image-wrapper">
                         <div class="top-shadow"></div>
                         <div class="right-shadow"></div>
@@ -32,15 +47,15 @@
                     </div>
                 </div>
                 <div class="hero-text-side">
-                    <h1 class="hero__title desktop">Soluções Profissionais para Reparos em <span class="primary-clr-400">Placas de Vídeo</span></h1>
-                    <p>Nesse curso, você aprenderá<span class="primary-clr-400"> técnicas para se especializar no reparos de placas de vídeo.</span> Após o curso, você terá habilidades de como agir em situações de placas que não ligam, ligam e não geram vídeo, ligam e se desligam, ligam e apresentam artefatos.</p>
+                    <h1 class="hero__title desktop">Desvende os <span class="accent-clr-400">Segredos das Placas de Vídeo:</span> Torne-se um Especialista em Reparos! Placas de Vídeo</h1>
+                    <p><span class="accent-clr-400">Descubra o segredo</span> por trás dos circuitos e componentes e domine a arte do reparo de <span class="accent-clr-400">placas de vídeo.</span> Em nosso curso, <span class="accent-clr-400">você aprenderá técnicas avançadas</span>, identificação de problemas e soluções eficazes. <span class="accent-clr-400">Torne-se a referência</span> em reparos de placas de vídeo e abra portas para uma <span class="accent-clr-400">carreira promissora</span> neste campo em constante crescimento.</p>
                     <button class="button"><a href="#">TRANSFORME SUA CARREIRA</a></button>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="testimonials">
+        <section class="testimonials" id="testimonials">
             <div class="top-shadow"></div>
             <div class="container">
                 <h2 class="testimonials__title">DEPOIMENTOS</h2>
@@ -102,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="modules-section">
+        <section class="modules-section" id="modules">
             <div class="container">
                 <div class="modules-images-wrapper">
                     <img class="modules-graphic-card" src="Módulos/module-graphic-card.png" alt="graphic card">
@@ -405,11 +420,45 @@
                 <button class="button"><a href="#">QUERO SER UM PROFISSIONAL</a></button>
             </div>
         </section>
-<!--         <section class="about-section">
-            <h2><span>quem será seu professor?</span>
-                <span class="primary-clr-400">Maxsuel Lopes</span></h2>
-        </section> -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-section-image-side">
+                    <div class="about-image-wrapper">
+                        <img src="sobre-foto.png" alt="Maxsuel Lopes mostrando uma placa de vídeo">
+                        <ul class="about-social-links">
+                            <li class="social-link"><a href="https://instagram.com/max_assistencia"><img src="redes sociais/bi_instagram.svg" alt="instagram"></a></li>
+                            <li class="social-link"><a href="https://www.facebook.com/MaxAssistenciaTecnica"><img src="redes sociais/ic_baseline-facebook.svg" alt="facebook"></a></li>
+                            <li class="social-link"><a href="https://www.youtube.com/MaxAssist%C3%AAnciaT%C3%A9cnica"><img src="redes sociais/mdi_youtube.svg" alt="youtube"></a></li>
+                    </div>
+                    </ul>
+                </div>
+                <div class="about-section-text-side">
+                    <h2 class="about-title"><span class="who-is-teacher">quem será seu professor?</span>
+                        <span class="accent-clr-400">Maxsuel Lopes</span></h2>
+                        <p>Técnico e CEO da Max Assistência Técnica, com mais de <span class="accent-clr-400">10 anos em experiência</span> na área de hardware e <span class="accent-clr-400">mais de 5 anos</span> em reparos em placas.<br><br> Atualmente conta com mais de <span class="accent-clr-400">1.000 alunos</span> entre cursos presenciais e on-line que já fizeram cursos desde o básico até o avançado.<br><br> <span class="accent-clr-400">Agora é sua vez de ter acesso a todo o meu conhecimento e experiência!</span></p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+         <div class="container">
+             <div class="footer-menu-side">
+                <img class="footer__logo" src="Logo/Logo-max.png" alt="logo">
+                <ul class="footer-nav-ul">
+                    <li class="footer-nav__li"><a href="#testimonials">Depoimentos</a></li>
+                    <li class="footer-nav__li"><a href="#modules">Módulos</a></li>
+                    <li class="footer-nav__li"><a href="#about">Sobre</a></li>
+                </ul>
+             </div>
+             <div class="footer-social-media-side">
+                <ul class="footer-social-links">
+                    <li class="social-link"><a href="https://instagram.com/max_assistencia"><img src="redes sociais/bi_instagram.svg" alt="instagram"></a></li>
+                    <li class="social-link"><a href="https://www.facebook.com/MaxAssistenciaTecnica"><img src="redes sociais/ic_baseline-facebook.svg" alt="facebook"></a></li>
+                    <li class="social-link"><a href="https://www.youtube.com/MaxAssist%C3%AAnciaT%C3%A9cnica"><img src="redes sociais/mdi_youtube.svg" alt="youtube"></a></li>
+                  </ul>
+                  <p class="copyright">© 2023 Max Assistência. Todos os direitos reservados.</p>
+             </div>
+         </div>
+    </footer>
 </body>
 </html>
